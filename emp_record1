@@ -1,0 +1,33 @@
+#include<stdio.h>
+struct employee
+{
+	int emp_no;
+	char emp_name[50];
+	char dept_name[100];
+	int salary;
+};
+void main()
+{
+	struct employee e_arr[2];
+	int i;
+	for(i=0;i<20;i++)
+	{
+		printf("Enter Employee Number\n");
+		scanf("%d",&e_arr[i].emp_no);
+		printf("Enter Employee Name\n");
+		gets(e_arr[i].emp_name);
+		printf("Enter the Department Name\n");
+		gets(e_arr[i].dept_name);
+		printf("Enter the Salary\n");
+		scanf("%d",&e_arr[i].salary);
+	}
+	for(i=0;i<20;i++)
+	{
+		printf("Employee Number=%d\n",e_arr[i].emp_no);
+		printf("Name=");
+		puts(e_arr[i].emp_name);
+		printf("\nDepartment Name=");
+		puts(e_arr[i].dept_name);
+		printf("\nSalary=%d",e_arr[i].salary);
+	}
+}
